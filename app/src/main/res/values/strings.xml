@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">diplom</string>
+    <string name="sign_up">Регистрация</string>
+    <string name="next">ДАЛЕЕ</string>
+    <string name="enter_phone_number">Введите номер телефона</string>
+    <string name="agreement">Используя прилодения вы принимаете Условия и Соглашения и соглашаетесь на получение рекламно-информационных сообщений</string>
+</resources>
