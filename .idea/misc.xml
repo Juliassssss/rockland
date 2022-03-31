@@ -3,8 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/authorization.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/authorization_fregment.xml" value="0.3625" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/detail_main_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/enter_cod.xml" value="0.35833333333333334" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/enter_cod_fregment.xml" value="0.3625" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/enter_name_fragment.xml" value="0.3625" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/item_news_rv.xml" value="0.3484375" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/item_persone_cabinet_view.xml" value="0.22" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/item_stock_rv.xml" value="0.3625" />
         <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/main_activity.xml" value="0.28940217391304346" />
-        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/main_fragment.xml" value="0.67" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/main_fragment.xml" value="0.22" />
+        <entry key="..\:/Users/grice/AndroidStudioProjects/diplom/app/src/main/res/layout/personal_cabinet_fragment.xml" value="0.18" />
       </map>
     </option>
   </component>

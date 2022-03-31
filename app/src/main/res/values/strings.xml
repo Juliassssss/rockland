@@ -1,7 +1,31 @@
 <resources>
-    <string name="app_name">diplom</string>
-    <string name="sign_up">Регистрация</string>
+    <!--   general  -->
+    <string name="app_name">Rockland</string>
+    <string name="back">Назад</string>
     <string name="next">ДАЛЕЕ</string>
+
+    <!--   authorization  -->
+    <string name="auth">Авторизация</string>
+    <string name="your_name">Ваше имя</string>
+    <string name="new_code">ПОЛУЧИТЬ НОВЫЙ КОД (%s)</string>
+    <string name="hint_phone">+7 913 716 -13-80</string>
+    <string name="enter_your_name_hint">Введите ваше имя</string>
+    <string name="hint_code">654-123</string>
     <string name="enter_phone_number">Введите номер телефона</string>
+    <string name="enter_code_from_sms">Введите код из смс</string>
     <string name="agreement">Используя прилодения вы принимаете Условия и Соглашения и соглашаетесь на получение рекламно-информационных сообщений</string>
+    <string name="enter_your_name_prompt">Укажите имя для Вашей идентификации при бронировании</string>
+
+    <!--  main   -->
+    <string name="main">Главная</string>
+    <string name="news">Новости</string>
+    <string name="stock">Акции</string>
+
+    <!--  personal cabinet  -->
+    <string name="personal_cabinet">Личный кабинет</string>
+    <string name="current_entries">Текущие записи</string>
+    <string name="visit_history">История посещений</string>
+    <string name="my_score">Мой счет</string>
+    <string name="exit">Выход</string>
+
 </resources>

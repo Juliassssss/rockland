@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersoneCabinetItem">
+        <attr name="persone_cabinet_item_title" format="string" />
+        <attr name="persone_cabinet_item_title_icon" format="reference" />
+        <attr name="persone_cabinet_item_summa" format="string" />
+        <attr name="personal_cabinet_color" format="color" />
+    </declare-styleable>
+</resources>

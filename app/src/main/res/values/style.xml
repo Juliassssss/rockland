@@ -11,6 +11,7 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">20sp</item>
+        <item name="android:fillAlpha">0.70</item>
         <item name="android:textColor">@color/black</item>
 <!--        <item name="font">Roboto</item>-->
         <item name="android:layout_marginTop">5dp</item>
@@ -23,9 +24,41 @@
         <item name="android:text">@string/next</item>
     </style>
 
+    <style name="ButtonGrey"  >
+        <item name="android:background">@color/grey_button</item>
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">@string/new_code</item>
+    </style>
+
     <style name="TextMinor">
         <item name="android:textColor">@color/black</item>
         <item name="android:alpha">0.54</item>
+    </style>
+
+    <style name="TextStock">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextNews">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextNewsHeader">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="TextItemCabinet">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="TextItemCabinetName">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
     </style>
 
 </resources>
