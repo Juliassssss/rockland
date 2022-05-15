@@ -5,9 +5,13 @@
     <string name="next">ДАЛЕЕ</string>
 
     <!--   authorization  -->
-    <string name="auth">Авторизация</string>
+    <string name="already_have_account">УЖЕ ЕСТЬ АККАУНТ</string>
+    <string name="registration">РЕГИСТРАЦИЯ</string>
+    <string name="registration_title">Регистрация</string>
+    <string name="authorization_title">Авторизация</string>
     <string name="your_name">Ваше имя</string>
     <string name="new_code">ПОЛУЧИТЬ НОВЫЙ КОД (%s)</string>
+    <string name="new_code_get">ПОЛУЧИТЬ НОВЫЙ КОД</string>
     <string name="hint_phone">+7 913 716 -13-80</string>
     <string name="enter_your_name_hint">Введите ваше имя</string>
     <string name="hint_code">654-123</string>
@@ -27,5 +31,14 @@
     <string name="visit_history">История посещений</string>
     <string name="my_score">Мой счет</string>
     <string name="exit">Выход</string>
+
+    <!--  schedule  -->
+    <string name="schedule">Рассписание</string>
+
+
+    <string name="some_error">Что-то пошло не так. Повторите еще</string>
+    <string name="unknown_error_message">Ошибка сервера, попробуйте позже</string>
+    <string name="load_data">Загрузка данных</string>
+    <string name="retry_label">Повторить</string>
 
 </resources>

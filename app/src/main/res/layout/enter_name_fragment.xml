@@ -8,7 +8,7 @@
     tools:context=".ui.main.MainFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/enterNameToolbar"
         style="@style/TextViewPrimary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -28,11 +28,10 @@
         android:layout_marginTop="@dimen/size_25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+        app:layout_constraintTop_toBottomOf="@+id/enterNameToolbar">
 
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_your_name_hint"
@@ -49,13 +48,13 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone" />
+            app:layout_constraintTop_toBottomOf="@+id/name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/enter_name_next_btn"
         style="@style/ButtonBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

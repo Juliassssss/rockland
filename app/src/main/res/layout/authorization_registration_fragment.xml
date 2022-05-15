@@ -8,19 +8,17 @@
     tools:context=".ui.main.MainFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/authRegToolbar"
         style="@style/TextViewPrimary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
         android:outlineProvider="bounds"
-        android:outlineSpotShadowColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/arrow_back"
-        app:title="@string/hint_phone" />
+        app:title="@string/authorization_title" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,8 +27,7 @@
         android:layout_marginTop="@dimen/size_25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
-
+        app:layout_constraintTop_toBottomOf="@+id/authRegToolbar">
 
         <TextView
             android:id="@+id/textView"
@@ -38,29 +35,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_12"
-            android:text="@string/enter_code_from_sms"
+            android:text="@string/enter_phone_number"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
+        <com.github.pinball83.maskededittext.MaskedEditText
             android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_code"
-            android:inputType="phone"
+            android:hint="@string/hint_phone"
+            android:inputType="number"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            app:mask="+ 7 *** ***-**-**"
+            app:maskIconColor="@color/black"
+            app:notMaskedSymbol="*" />
+
+        <TextView
+
+            style="@style/TextMinor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/agreement"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phone" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
-        style="@style/ButtonGrey"
+        android:id="@+id/authRegNextBtn"
+        style="@style/ButtonBlue"
         android:layout_width="match_parent"
-        android:text="@string/new_code"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/size_24"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/personal_cabinet_graph"
+    app:startDestination="@id/personalCabinetFragment">
+
+    <fragment
+        android:id="@+id/personalCabinetFragment"
+        android:name="com.example.diplom.ui.personalcabinet.PersonalCabinetFragment"
+        android:label="PersonalCabinetFragment"
+        tools:layout="@layout/personal_cabinet_fragment">
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_login_graph"
+            app:destination="@id/login_graph" />
+    </fragment>
+
+    <include app:graph="@navigation/login_graph" />
+</navigation>

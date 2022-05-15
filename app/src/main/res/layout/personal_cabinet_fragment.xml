@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/toolbarSettings"
         style="@style/TextViewPrimary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -15,115 +15,146 @@
         app:layout_constraintTop_toTopOf="parent"
         app:title="@string/personal_cabinet" />
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/linearLayoutCompat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/size_16"
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/size_16"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/example_photo"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <TextView
-            style="@style/TextStock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:lineHeight="24px"
-            android:paddingTop="@dimen/size_16"
-            android:text="Варвара Карпуша "
-            android:textFontWeight="500" />
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="@dimen/size_8"
-        android:alpha="0.12"
-        android:background="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat" />
-
-    <com.example.diplom.ui.main.PersoneCabinetItem
-        android:id="@+id/personeCabinetItem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:persone_cabinet_item_summa="5000 P"
-        app:persone_cabinet_item_title="@string/my_score"
-        app:persone_cabinet_item_title_icon="@drawable/ic_account_balance_wallet" />
-
-    <com.example.diplom.ui.main.PersoneCabinetItem
-        android:id="@+id/personeCabinetItem2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personeCabinetItem"
-        app:persone_cabinet_item_title="@string/current_entries"
-        app:persone_cabinet_item_title_icon="@drawable/ic_today" />
-
-    <com.example.diplom.ui.main.PersoneCabinetItem
-        android:id="@+id/personeCabinetItem3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personeCabinetItem2"
-        app:persone_cabinet_item_title="@string/visit_history"
-        app:persone_cabinet_item_title_icon="@drawable/ic_history" />
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/size_38"
-        android:src="@drawable/example_qr"
-        app:layout_constraintBottom_toTopOf="@+id/view1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personeCabinetItem3" />
-
-
-    <View
-        android:id="@+id/view1"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:alpha="0.12"
-        android:background="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/appCompatTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatTextView
-        style="@style/TextItemCabinet"
-        android:id="@+id/appCompatTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/size_16"
-        android:paddingVertical="@dimen/size_10"
-        android:text="@string/exit"
-        android:textColor="@color/red"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSettings"
+        app:layout_constraintVertical_bias="1.0">
+
+        <com.example.diplom.ui.castom.StateDisplayer
+            android:id="@+id/stateDisplayerApp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarSettings">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/user_info_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_16"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/example_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/name"
+                        style="@style/TextStock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineHeight="24px"
+                        android:paddingTop="@dimen/size_16"
+                        android:text="Варвара Карпуша "
+                        android:textFontWeight="500" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/size_8"
+                    android:alpha="0.12"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_info_btn" />
+
+                <com.example.diplom.ui.castom.PersoneCabinetItem
+                    android:id="@+id/my_score_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view"
+                    app:persone_cabinet_item_summa="5000 P"
+                    app:persone_cabinet_item_title="@string/my_score"
+                    app:persone_cabinet_item_title_icon="@drawable/ic_account_balance_wallet" />
+
+                <com.example.diplom.ui.castom.PersoneCabinetItem
+                    android:id="@+id/current_entries_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/my_score_btn"
+                    app:persone_cabinet_item_title="@string/current_entries"
+                    app:persone_cabinet_item_title_icon="@drawable/ic_today" />
+
+                <com.example.diplom.ui.castom.PersoneCabinetItem
+                    android:id="@+id/visit_history_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/current_entries_btn"
+                    app:persone_cabinet_item_title="@string/visit_history"
+                    app:persone_cabinet_item_title_icon="@drawable/ic_history" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/qr_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_38"
+                    android:layout_marginBottom="@dimen/size_38"
+                    android:src="@drawable/example_qr"
+                    app:layout_constraintBottom_toTopOf="@+id/view1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/visit_history_btn" />
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:alpha="0.12"
+                    android:background="@color/black"
+                    app:layout_constraintBottom_toTopOf="@+id/log_out"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/log_out"
+                    style="@style/TextItemCabinet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_16"
+                    android:paddingVertical="@dimen/size_10"
+                    android:text="@string/exit"
+                    android:textColor="@color/red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.example.diplom.ui.castom.StateDisplayer>
+
+    </androidx.core.widget.NestedScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

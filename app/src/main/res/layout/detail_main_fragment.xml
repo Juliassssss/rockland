@@ -18,7 +18,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/materialToolbar"
+                android:id="@+id/authRegToolbar"
                 style="@style/TextViewPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -37,7 +37,7 @@
                 android:src="@drawable/example_stock_img"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+                app:layout_constraintTop_toBottomOf="@+id/authRegToolbar" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

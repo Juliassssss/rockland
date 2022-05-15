@@ -1,4 +1,4 @@
-package com.example.diplom.ui.main
+package com.example.diplom.ui.castom
 
 import android.content.Context
 import android.util.AttributeSet

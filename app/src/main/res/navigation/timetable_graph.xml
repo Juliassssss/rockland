@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timetable_graph"
+    app:startDestination="@id/timetableFragment">
+
+    <fragment
+        android:id="@+id/timetableFragment"
+        android:name="com.example.diplom.ui.timetable.TimetableFragment"
+        android:label="TimetableFragment"
+        tools:layout="@layout/timetable_fragment"/>
+</navigation>

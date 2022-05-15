@@ -8,27 +8,29 @@
     tools:context=".ui.main.MainFragment">
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/materialToolbar"
+        android:id="@+id/enterCodeToolbar"
         style="@style/TextViewPrimary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         android:outlineProvider="bounds"
         android:outlineSpotShadowColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="@string/auth" />
+        app:navigationIcon="@drawable/arrow_back"
+        app:title="@string/hint_phone" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/size_16"
         android:layout_marginTop="@dimen/size_25"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
-
+        app:layout_constraintTop_toBottomOf="@+id/enterCodeToolbar">
 
         <TextView
             android:id="@+id/textView"
@@ -36,40 +38,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/size_12"
-            android:text="@string/enter_phone_number"
+            android:text="@string/enter_code_from_sms"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/phone"
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/code"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_phone"
-            android:inputType="phone"
+            android:hint="@string/hint_code"
+            android:inputType="number"
+            android:maxLength="6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.0" />
-
-        <TextView
-
-            style="@style/TextMinor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/agreement"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/phone" />
+            app:layout_constraintVertical_bias="0.0"
+            app:maskIconColor="@color/black" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/appCompatButton"
+        android:id="@+id/nextBtn"
         style="@style/ButtonBlue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_16"
+        app:layout_constraintBottom_toTopOf="@+id/newCodeBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/newCodeBtn"
+        style="@style/ButtonGrey"
+        android:layout_width="match_parent"
+        android:text="@string/new_code"
+        android:layout_height="wrap_content"
+        android:clickable="false"
         android:layout_marginBottom="@dimen/size_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

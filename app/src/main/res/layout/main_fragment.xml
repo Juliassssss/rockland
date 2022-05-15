@@ -21,7 +21,7 @@
             android:layout_height="match_parent">
 
             <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/materialToolbar"
+                android:id="@+id/authRegToolbar"
                 style="@style/TextViewPrimary"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
@@ -42,10 +42,10 @@
                 android:text="@string/news"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/materialToolbar" />
+                app:layout_constraintTop_toBottomOf="@+id/authRegToolbar" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/news_rv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/size_16"
@@ -66,9 +66,10 @@
                 android:layout_marginTop="@dimen/size_24"
                 android:text="@string/stock"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+                app:layout_constraintTop_toBottomOf="@+id/news_rv" />
 
             <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/promotions_rv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size_12"
