@@ -1,10 +1,12 @@
 package com.example.diplom.utils.module
 
 import com.example.diplom.ui.authorizationregistration.AuthorizationRegistrationFragment
+import com.example.diplom.ui.base.SingleActionChooser
 import com.example.diplom.ui.entercode.EnterCodeFragment
 import com.example.diplom.ui.entername.EnterNameFragment
 import com.example.diplom.ui.personalcabinet.PersonalCabinetFragment
 import com.example.diplom.ui.newspromotions.NewsPromotionsFragment
+import com.example.diplom.ui.personalcabinet.editprofil.EditProfileFragment
 import com.example.diplom.ui.splash.SplashFragment
 import com.example.diplom.ui.start.StartFragment
 import com.example.diplom.ui.timetable.TimetableFragment
@@ -36,5 +38,11 @@ abstract class FragmentModule {
 
     @ContributesAndroidInjector
     abstract fun startFragment(): StartFragment
+
+    @ContributesAndroidInjector
+    abstract fun editProfileFragment(): EditProfileFragment
+
+    @ContributesAndroidInjector
+    abstract fun singleActionChooser(): SingleActionChooser
 
 }

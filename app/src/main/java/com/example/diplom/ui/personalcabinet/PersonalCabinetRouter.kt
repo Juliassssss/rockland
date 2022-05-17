@@ -1,7 +1,6 @@
 package com.example.diplom.ui.personalcabinet
 
 import com.example.diplom.ui.base.model.Action
-import com.example.diplom.ui.splash.SplashFragmentDirections
 import javax.inject.Inject
 
 class PersonalCabinetRouter @Inject constructor() {
@@ -10,4 +9,11 @@ class PersonalCabinetRouter @Inject constructor() {
             PersonalCabinetFragmentDirections.actionPersonalCabinetFragmentToLoginGraph()
         )
     }
+
+    fun openEditProfile(): Action {
+        return Action.Navigate(
+            PersonalCabinetFragmentDirections.actionPersonalCabinetFragmentToEditProfileFragment()
+        )
+    }
+
 }

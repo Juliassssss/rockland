@@ -13,7 +13,24 @@
         <action
             android:id="@+id/action_personalCabinetFragment_to_login_graph"
             app:destination="@id/login_graph" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_editProfileFragment"
+            app:destination="@id/editProfileFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/editProfileFragment"
+        android:name="com.example.diplom.ui.personalcabinet.editprofil.EditProfileFragment"
+        tools:layout="@layout/edit_profile_fragment"
+        android:label="EditProfile">
+        <action
+            android:id="@+id/action_editProfileFragment_to_ex"
+            app:destination="@id/ex" />
+    </fragment>
+
+<dialog
+    android:id="@+id/ex"
+    android:name="com.example.diplom.ui.base.SingleActionChooser"/>
 
     <include app:graph="@navigation/login_graph" />
 </navigation>

@@ -14,4 +14,8 @@
     <dimen name="size_8">8dp</dimen>
     <dimen name="text_16">16sp</dimen>
     <dimen name="size_132">132dp</dimen>
+    <dimen name="size_17">17dp</dimen>
+    <dimen name="size_18">18dp</dimen>
+    <dimen name="size_15">15dp</dimen>
+    <dimen name="size_14">14dp</dimen>
 </resources>

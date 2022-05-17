@@ -8,6 +8,7 @@ import com.example.diplom.ui.entername.EnterNameViewModel
 import com.example.diplom.ui.personalcabinet.PersonalCabinetViewModel
 import com.example.diplom.ui.main.MainActivityViewModel
 import com.example.diplom.ui.newspromotions.NewsPromotionsViewModel
+import com.example.diplom.ui.personalcabinet.editprofil.EditProfileViewModel
 import com.example.diplom.ui.splash.SplashViewModel
 import com.example.diplom.ui.start.StartViewModel
 import com.example.diplom.ui.timetable.TimetableViewModel
@@ -65,5 +66,10 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(StartViewModel::class)
     abstract fun startViewModel(viewModel: StartViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(EditProfileViewModel::class)
+    abstract fun editProfileViewModel(viewModel: EditProfileViewModel): ViewModel
 
 }

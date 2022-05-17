@@ -32,13 +32,36 @@
     <string name="my_score">Мой счет</string>
     <string name="exit">Выход</string>
 
+    <!--  edit profile  -->
+    <string name="candidate">Кандидат в мастера спорта</string>
+    <string name="master">Мастер спорта</string>
+    <string name="first">Первый</string>
+    <string name="second">Второй</string>
+    <string name="third">Третий</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="none">Не указан</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="edit_name_title">Изменение имени</string>
+    <string name="first_and_last_name">Имя и фамилия</string>
+    <string name="date_of_birth">Дата рождения</string>
+    <string name="gender">Пол</string>
+    <string name="sports_category">Спортивный разряд</string>
+    <string name="phone">Номер телефона</string>
+    <string name="name">Имя</string>
+    <string name="last_name">Фамилия</string>
+    <string name="enter_name_hint">Введите имя</string>
+    <string name="enter_last_name_hint">Введите фамилию</string>
+
     <!--  schedule  -->
     <string name="schedule">Рассписание</string>
 
-
+    <!--  state displayr  -->
     <string name="some_error">Что-то пошло не так. Повторите еще</string>
     <string name="unknown_error_message">Ошибка сервера, попробуйте позже</string>
     <string name="load_data">Загрузка данных</string>
     <string name="retry_label">Повторить</string>
+    <string name="edit_photo">Изменить фото</string>
+
 
 </resources>

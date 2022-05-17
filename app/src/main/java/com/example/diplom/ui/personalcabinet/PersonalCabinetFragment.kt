@@ -23,6 +23,10 @@ class PersonalCabinetFragment : BaseFragment(R.layout.personal_cabinet_fragment)
         binding.logOut.setOnClickListener {
             viewModel.logout()
         }
+
+        binding.profileEditBtn.setOnClickListener {
+            viewModel.openEdit()
+        }
     }
 
     override fun onBindViewModel() = viewModel.apply {
@@ -30,7 +34,7 @@ class PersonalCabinetFragment : BaseFragment(R.layout.personal_cabinet_fragment)
         this.user.observe { screenState ->
             when (screenState) {
                 is ScreenState.Success -> {
-                   with(screenState.value) {
+                    with(screenState.value) {
                         binding.name.text = "${this?.name} ${this?.lastName}"
 //
 ////                        this?.avatar?.let {
@@ -39,8 +43,8 @@ class PersonalCabinetFragment : BaseFragment(R.layout.personal_cabinet_fragment)
 ////                                .load(it)
 ////                                .into(binding.avatar)
 ////                        }
-                        }
                     }
+                }
                 else -> {
                 }
             }

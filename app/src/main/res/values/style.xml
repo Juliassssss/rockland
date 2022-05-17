@@ -67,4 +67,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="TextItemEditProfile">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>
