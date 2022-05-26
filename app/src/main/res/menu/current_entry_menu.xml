@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/reset_entry_menu"
+        android:title="@string/reset_entry_menu" />
+
+    <item
+        android:id="@+id/remind_entry_menu"
+        android:title="@string/remind_entry_menu" />
+</menu>

@@ -1,8 +1,6 @@
 package com.example.diplom.ui.personalcabinet
 
-import android.content.Intent
 import android.os.Bundle
-import com.bumptech.glide.Glide
 import com.example.diplom.R
 import com.example.diplom.databinding.PersonalCabinetFragmentBinding
 import com.example.diplom.extantions.viewBinding
@@ -27,6 +25,18 @@ class PersonalCabinetFragment : BaseFragment(R.layout.personal_cabinet_fragment)
         binding.profileEditBtn.setOnClickListener {
             viewModel.openEdit()
         }
+
+        binding.myScoreBtn.setOnClickListener {
+            viewModel.openCashAccount()
+        }
+
+        binding.currentEntriesBtn.setOnClickListener {
+            viewModel.openCurrentEntry(true)
+        }
+
+        binding.visitHistoryBtn.setOnClickListener {
+            viewModel.openCurrentEntry(false)
+        }
     }
 
     override fun onBindViewModel() = viewModel.apply {
@@ -36,6 +46,12 @@ class PersonalCabinetFragment : BaseFragment(R.layout.personal_cabinet_fragment)
                 is ScreenState.Success -> {
                     with(screenState.value) {
                         binding.name.text = "${this?.name} ${this?.lastName}"
+                        binding.myScoreBtn.setSumma(
+                            getString(
+                                R.string.my_cash_residual,
+                                this?.account
+                            )
+                        )
 //
 ////                        this?.avatar?.let {
 ////                            Glide

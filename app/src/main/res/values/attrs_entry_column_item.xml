@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="EntryColumnItem">
+        <attr name="entry_column_title" format="string" />
+        <attr name="entry_column_value" format="string" />
+    </declare-styleable>
+</resources>

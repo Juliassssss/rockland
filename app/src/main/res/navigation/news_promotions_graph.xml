@@ -9,5 +9,24 @@
         android:id="@+id/newsPromotionsFragment"
         android:name="com.example.diplom.ui.newspromotions.NewsPromotionsFragment"
         android:label="NewsPromotionsFragment"
-        tools:layout="@layout/main_fragment"/>
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_newsPromotionsFragment_to_detailNewsPromotionsFragment"
+            app:destination="@id/detailNewsPromotionsFragment">
+
+            <argument
+                android:name="isNews"
+                app:argType="boolean" />
+
+            <argument
+                android:name="id"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/detailNewsPromotionsFragment"
+        android:name="com.example.diplom.ui.newspromotions.detail.DetailNewsPromotionsFragment"
+        android:label="DetailNewsPromotionsFragment"
+        tools:layout="@layout/detail_news_stock_fragment" />
+
 </navigation>

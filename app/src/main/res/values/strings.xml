@@ -43,6 +43,7 @@
     <string name="none">Не указан</string>
     <string name="my_profile">Мой профиль</string>
     <string name="edit_name_title">Изменение имени</string>
+    <string name="edit_phone_title">Изменение телефона</string>
     <string name="first_and_last_name">Имя и фамилия</string>
     <string name="date_of_birth">Дата рождения</string>
     <string name="gender">Пол</string>
@@ -52,6 +53,7 @@
     <string name="last_name">Фамилия</string>
     <string name="enter_name_hint">Введите имя</string>
     <string name="enter_last_name_hint">Введите фамилию</string>
+    <string name="enter_date">Введите дату рождения</string>
 
     <!--  schedule  -->
     <string name="schedule">Рассписание</string>
@@ -61,7 +63,26 @@
     <string name="unknown_error_message">Ошибка сервера, попробуйте позже</string>
     <string name="load_data">Загрузка данных</string>
     <string name="retry_label">Повторить</string>
+
     <string name="edit_photo">Изменить фото</string>
+    <string name="title_edit_gender">Укажите пол</string>
+    <string name="title_edit_sport_category">Укажите спортивный разрядл</string>
+    <string name="reset">Сброс</string>
+    <string name="ready">готово</string>
+    <string name="title_cash_account">Мой счет</string>
+    <string name="my_cash_residual">%s ₽</string>
+    <string name="top_up_account_title">Пополнить счет</string>
+    <string name="enter_sum_title">Укажите сумму пополнения</string>
+    <string name="enter_sum_hint">Укажите сумму в рублях</string>
+    <string name="error_enter_phone_toast">Неправильно введен номер телефона!</string>
+    <string name="error_enter_code_toast">Неправильно введен код!</string>
+    <string name="error_enter_name_toast">Введите имя!</string>
+    <string name="current_entry_title">Текущие записи</string>
+    <string name="history_entry_title">История посещений</string>
+    <string name="reset_entry_menu">Отменить</string>
+    <string name="remind_entry_menu">Напомнить</string>
+    <string name="entry_cancel">ОТМЕНА</string>
+    <string name="entry_carried">ПРОВЕДЕНА</string>
 
 
 </resources>

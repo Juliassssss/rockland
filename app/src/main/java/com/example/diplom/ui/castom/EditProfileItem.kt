@@ -7,7 +7,6 @@ import android.widget.FrameLayout
 import androidx.core.content.withStyledAttributes
 import com.example.diplom.R
 import com.example.diplom.databinding.ItemEditProfileViewBinding
-import com.example.diplom.databinding.ItemPersoneCabinetViewBinding
 
 class EditProfileItem @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
@@ -20,7 +19,6 @@ class EditProfileItem @JvmOverloads constructor(
 
             val nomination = getString(R.styleable.EditProfileItem_edit_profile_item_nomination)
             val data = getString(R.styleable.EditProfileItem_edit_profile_item_data)
-
 
             binding.nomination.text = nomination
             binding.date.text = data

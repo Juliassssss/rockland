@@ -4,10 +4,12 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.diplom.R
 import com.example.diplom.databinding.MainFragmentBinding
+import com.example.diplom.extantions.getName
 import com.example.diplom.extantions.viewBinding
 import com.example.diplom.model.News
 import com.example.diplom.model.Promotions
 import com.example.diplom.ui.base.BaseFragment
+import com.example.diplom.ui.base.model.ScreenState
 import javax.inject.Inject
 
 class NewsPromotionsFragment : BaseFragment(R.layout.main_fragment){
@@ -22,7 +24,7 @@ class NewsPromotionsFragment : BaseFragment(R.layout.main_fragment){
     lateinit var promotionsAdapter: PromotionsAdapter
 
     override fun onScreenCreation() {
-
+        viewModel.init()
     }
 
     override fun onLayoutInit(savedInstanceState: Bundle?) {
@@ -34,11 +36,10 @@ class NewsPromotionsFragment : BaseFragment(R.layout.main_fragment){
             itemAnimator = null
 
             adapter = newsAdapter.apply {
-//                clickListener = {
-//                    viewModel.openCreateAccount(it)
-//                }
+                detailClickHandler = {
+                    viewModel.openDetail(it.id, true)
+                }
             }
-
         }
 
         binding.promotionsRv.apply {
@@ -48,42 +49,44 @@ class NewsPromotionsFragment : BaseFragment(R.layout.main_fragment){
             itemAnimator = null
 
             adapter = promotionsAdapter.apply {
-//                clickListener = {
-//                    viewModel.openCreateAccount(it)
-//                }
+                detailClickHandler = {
+                    viewModel.openDetail(it.id, false)
+                }
             }
 
         }
-
     }
 
     override fun onBindViewModel()= viewModel.apply {
+        this.inLoad.observe{screenState ->
+            binding.stateDisplayerApp.initViewFromState(screenState)
+        }
 
-        newsAdapter.submitList(
-            listOf(
-                News(1," Изменение графика работы", "а а а а а а а а а а а а а а "),
-                News(2," Изменение цен", "а а а а а а а а а а а а а а "),
-                News(3," Изменение графика работы", "а а а а а а а а а а а а а а "),
-                News(4," График работы на праздники", "а а а а а а а а а а а а а а "),
-                News(5," Новые чемпионы", "а а а а а а а а а а а а а а "),
-                News(6," Новость", "а а а а а а а а а а а а а а "),
-                News(7," Новость", "а а а а а а а а а а а а а а "),
-                News(8," Новость", "а а а а а а а а а а а а а а "),
-            )
-        )
+        this.news.observe{screenState ->
+            when (screenState) {
+                is ScreenState.Success -> {
+                    with(screenState.value) {
+                        newsAdapter.submitList(this)
+                    }
+                }
+                else -> {
+                }
+            }
+            binding.stateDisplayerNews.initViewFromState(screenState)
+        }
 
-        promotionsAdapter.submitList(
-            listOf(
-                Promotions(1," Снижение стоимости  абонементов", "а а а а а а а а а а а а а а "),
-                Promotions(2," Скидки для семьи", "а а а а а а а а а а а а а а "),
-                Promotions(3," Праздники с нами выгоднее", "а а а а а а а а а а а а а а "),
-                Promotions(4," Снижение стоимости годовых абонементов", "а а а а а а а а а а а а а а "),
-                Promotions(5," Скидки на подарки любимым", "а а а а а а а а а а а а а а "),
-                Promotions(6," Снижение стоимости годовых абонементов", "а а а а а а а а а а а а а а "),
-                Promotions(7," Снижение стоимости годовых абонементов", "а а а а а а а а а а а а а а "),
-                Promotions(8," Снижение стоимости годовых абонементов", "а а а а а а а а а а а а а а "),
-            )
-        )
+        this.promotions.observe{screenState ->
+            when (screenState) {
+                is ScreenState.Success -> {
+                    with(screenState.value) {
+                        promotionsAdapter.submitList(this)
+                    }
+                }
+                else -> {
+                }
+            }
+            binding.stateDisplayerPromotions.initViewFromState(screenState)
+        }
 
     }
 

@@ -32,7 +32,7 @@ class AuthorizationRegistrationFragment :
             val phone = binding.phone.text
 
             if (phone!!.trim().length != 17) {
-                Toast.makeText(context, "Неправильно введен номер телефона!", Toast.LENGTH_LONG)
+                Toast.makeText(context, getString(R.string.error_enter_phone_toast), Toast.LENGTH_LONG)
                     .show()
             } else
                 viewModel.enterCode(phone.toString(), args.isRegistrate)

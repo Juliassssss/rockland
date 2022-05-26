@@ -15,75 +15,96 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/content"
+        <com.example.diplom.ui.castom.StateDisplayer
+            android:id="@+id/stateDisplayerApp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <com.google.android.material.appbar.MaterialToolbar
-                android:id="@+id/authRegToolbar"
-                style="@style/TextViewPrimary"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/content"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:outlineProvider="bounds"
-                android:outlineSpotShadowColor="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:title="@string/main" />
+                android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/textView2"
-                style="@style/TextViewPrimary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_16"
-                android:text="@string/news"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/authRegToolbar" />
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/authRegToolbar"
+                    style="@style/TextViewPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:outlineProvider="bounds"
+                    android:outlineSpotShadowColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title="@string/main" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/news_rv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_16"
-                android:layout_marginTop="@dimen/size_12"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView2"
-                tools:itemCount="1"
-                tools:listitem="@layout/item_news_rv" />
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/TextViewPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_16"
+                    android:text="@string/news"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/authRegToolbar" />
 
+                <com.example.diplom.ui.castom.StateDisplayer
+                    android:id="@+id/stateDisplayerNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2">
 
-            <TextView
-                android:id="@+id/textView3"
-                style="@style/TextViewPrimary"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/size_16"
-                android:layout_marginTop="@dimen/size_24"
-                android:text="@string/stock"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/news_rv" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/news_rv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_16"
+                        android:layout_marginTop="@dimen/size_12"
+                        android:orientation="horizontal"
+                        tools:listitem="@layout/item_news_rv" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/promotions_rv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size_12"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:layout_marginStart="@dimen/size_16"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:itemCount="1"
-                tools:listitem="@layout/item_stock_rv" />
+                </com.example.diplom.ui.castom.StateDisplayer>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/TextViewPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stock"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginStart="@dimen/size_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/stateDisplayerNews"/>
 
+                <com.example.diplom.ui.castom.StateDisplayer
+                    android:id="@+id/stateDisplayerPromotions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/promotions_rv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/size_16"
+                        android:layout_marginTop="@dimen/size_12"
+                        tools:listitem="@layout/item_stock_rv" />
+
+                </com.example.diplom.ui.castom.StateDisplayer>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.example.diplom.ui.castom.StateDisplayer>
 
     </androidx.core.widget.NestedScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

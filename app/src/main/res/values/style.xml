@@ -31,6 +31,13 @@
         <item name="android:text">@string/new_code</item>
     </style>
 
+    <style name="ButtonGreyWhite"  >
+        <item name="background">@color/white</item>
+        <item name="android:textColor">@color/grey_text</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:text">@string/reset</item>
+    </style>
+
     <style name="ButtonWhite"  >
         <item name="android:background">@color/white</item>
         <item name="android:textColor">@color/black</item>
@@ -45,6 +52,21 @@
     <style name="TextStock">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextTitleEditUserInfo">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextTitleEntry">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <style name="TextValueEntry">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
     </style>
 
     <style name="TextNews">
@@ -65,6 +87,11 @@
     <style name="TextItemCabinetName">
         <item name="android:textColor">@color/black</item>
         <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextCashAccount">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">34sp</item>
     </style>
 
     <style name="TextItemEditProfile">

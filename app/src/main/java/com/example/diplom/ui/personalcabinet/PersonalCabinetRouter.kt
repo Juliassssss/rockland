@@ -16,4 +16,16 @@ class PersonalCabinetRouter @Inject constructor() {
         )
     }
 
+    fun openCashAccount(): Action {
+        return Action.Navigate(
+            PersonalCabinetFragmentDirections.actionPersonalCabinetFragmentToCashAccountFragment()
+        )
+    }
+
+    fun openCurrentEntry(isCurrent: Boolean): Action {
+        return Action.Navigate(
+            PersonalCabinetFragmentDirections.actionPersonalCabinetFragmentToEntryCurrentFragment(isCurrent)
+        )
+    }
+
 }

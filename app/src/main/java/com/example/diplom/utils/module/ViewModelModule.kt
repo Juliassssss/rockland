@@ -3,12 +3,16 @@ package com.example.diplom.utils.module
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.diplom.ui.authorizationregistration.AuthorizationRegistrationViewModel
+import com.example.diplom.ui.cashaccount.CashAccountViewModel
 import com.example.diplom.ui.entercode.EnterCodeViewModel
 import com.example.diplom.ui.entername.EnterNameViewModel
+import com.example.diplom.ui.entry.EntryCurrentViewModel
 import com.example.diplom.ui.personalcabinet.PersonalCabinetViewModel
 import com.example.diplom.ui.main.MainActivityViewModel
 import com.example.diplom.ui.newspromotions.NewsPromotionsViewModel
+import com.example.diplom.ui.newspromotions.detail.DetailNewsPromotionsViewModel
 import com.example.diplom.ui.personalcabinet.editprofil.EditProfileViewModel
+import com.example.diplom.ui.personalcabinet.editprofil.phone.EditPhoneViewModel
 import com.example.diplom.ui.splash.SplashViewModel
 import com.example.diplom.ui.start.StartViewModel
 import com.example.diplom.ui.timetable.TimetableViewModel
@@ -71,5 +75,25 @@ abstract class ViewModelModule {
     @IntoMap
     @ViewModelKey(EditProfileViewModel::class)
     abstract fun editProfileViewModel(viewModel: EditProfileViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(DetailNewsPromotionsViewModel::class)
+    abstract fun detailNewsPromotionsViewModel(viewModel: DetailNewsPromotionsViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(CashAccountViewModel::class)
+    abstract fun cashAccountViewModel(viewModel: CashAccountViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(EntryCurrentViewModel::class)
+    abstract fun entryCurrentViewModel(viewModel: EntryCurrentViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(EditPhoneViewModel::class)
+    abstract fun editPhoneViewModel(viewModel: EditPhoneViewModel): ViewModel
 
 }

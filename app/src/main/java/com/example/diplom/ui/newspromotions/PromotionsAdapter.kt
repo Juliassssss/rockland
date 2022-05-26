@@ -18,7 +18,6 @@ class PromotionsAdapter @Inject constructor(
 
     var detailClickHandler: (Promotions) -> Unit = {}
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PromotionsViewHolder {
         val binding = ItemStockRvBinding.inflate(
             LayoutInflater.from(parent.context),
@@ -53,9 +52,11 @@ class PromotionsViewHolder(
 //                    .into(img)
 //            }
             title.text = promotions.title
+
+            stock.setOnClickListener{
+                detailClickHandler(promotions)
+            }
         }
-
-
     }
 }
 

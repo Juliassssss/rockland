@@ -43,7 +43,17 @@ class PreferencesStorageImpl constructor(context: Context) : PreferencesStorage 
         prefUser.edit().putString(PROFILE_KEY, encodeToString).apply()
     }
 
-    override fun getUserProfile(): UserInfo? {
+    override fun getUserProfile(): UserInfo {
+        return prefUser.getString(PROFILE_KEY, null)
+            ?.takeIf { it.isNotEmpty() }
+            ?.let {
+                return@let Json
+                    .decodeFromString<UserInfoEntity>(it)
+                    .fromEntity()
+            }!!
+    }
+
+    override fun getUserProfileStart(): UserInfo? {
         return prefUser.getString(PROFILE_KEY, null)
             ?.takeIf { it.isNotEmpty() }
             ?.let {

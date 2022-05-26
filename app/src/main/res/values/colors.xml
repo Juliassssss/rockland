@@ -2,10 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_50">#AEFCF9F9</color>
     <color name="grey">#666666</color>
     <color name="grey_text">#a6a6a6</color>
     <color name="grey_button">#e0e0e0</color>
     <color name="blue">#2C98F0</color>
+    <color name="blue_profile">#007AFF</color>
+    <color name="entry_carried_background">#19007AFF</color>
     <color name="start">#A1C9E9</color>
     <color name="red">#FF3B30</color>
+    <color name="background">#E5E5E5</color>
 </resources>

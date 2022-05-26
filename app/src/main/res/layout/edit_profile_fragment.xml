@@ -10,10 +10,7 @@
         style="@style/TextViewPrimary"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:outlineProvider="bounds"
-        android:outlineSpotShadowColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navigationIcon="@drawable/arrow_back"
@@ -30,113 +27,113 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbarEditProfile"
         app:layout_constraintVertical_bias="1.0">
 
-        <!--        <com.example.diplom.ui.castom.StateDisplayer-->
-        <!--            android:id="@+id/stateDisplayerApp"-->
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="match_parent"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintEnd_toEndOf="parent"-->
-        <!--            app:layout_constraintStart_toStartOf="parent"-->
-        <!--            app:layout_constraintTop_toBottomOf="@+id/toolbarSettings">-->
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.example.diplom.ui.castom.StateDisplayer
+            android:id="@+id/stateDisplayerApp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarEditProfile">
 
-            <androidx.appcompat.widget.LinearLayoutCompat
-                android:id="@+id/user_info_btn"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="@dimen/size_16"
-                android:orientation="horizontal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="match_parent">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:id="@+id/avatar"
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_def_photo"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <TextView
-                    android:id="@+id/title_edit_photo"
-                    style="@style/TextStock"
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/user_info_btn"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="@dimen/size_16"
-                    android:lineHeight="24px"
-                    android:paddingTop="@dimen/size_16"
-                    android:text="@string/edit_photo"
-                    android:textFontWeight="500" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/size_16"
+                    android:orientation="horizontal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
-            </androidx.appcompat.widget.LinearLayoutCompat>
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-            <View
-                android:id="@+id/view"
-                android:layout_width="0dp"
-                android:layout_height="1dp"
-                android:layout_marginTop="@dimen/size_8"
-                android:alpha="0.12"
-                android:background="@color/black"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/user_info_btn" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/avatar"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_def_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.example.diplom.ui.castom.EditProfileItem
-                android:id="@+id/edit_name_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:edit_profile_item_nomination="@string/first_and_last_name"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/view" />
+                    <TextView
+                        android:id="@+id/title_edit_photo"
+                        style="@style/TextStock"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/size_16"
+                        android:lineHeight="24px"
+                        android:paddingTop="@dimen/size_16"
+                        android:text="@string/edit_photo"
+                        android:textFontWeight="500" />
 
-            <com.example.diplom.ui.castom.EditProfileItem
-                android:id="@+id/edit_phone_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:edit_profile_item_nomination="@string/phone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_name_btn" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <com.example.diplom.ui.castom.EditProfileItem
-                android:id="@+id/edit_date_of_birth_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:edit_profile_item_nomination="@string/date_of_birth"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_phone_btn" />
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/size_8"
+                    android:alpha="0.12"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/user_info_btn" />
 
-            <com.example.diplom.ui.castom.EditProfileItem
-                android:id="@+id/edit_gender_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:edit_profile_item_nomination="@string/gender"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_date_of_birth_btn" />
+                <com.example.diplom.ui.castom.EditProfileItem
+                    android:id="@+id/edit_name_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:edit_profile_item_nomination="@string/first_and_last_name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/view" />
 
-            <com.example.diplom.ui.castom.EditProfileItem
-                android:id="@+id/edit_sports_category_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:edit_profile_item_nomination="@string/sports_category"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/edit_gender_btn" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <com.example.diplom.ui.castom.EditProfileItem
+                    android:id="@+id/edit_phone_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:edit_profile_item_nomination="@string/phone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_name_btn" />
 
-        <!--        </com.example.diplom.ui.castom.StateDisplayer>-->
+                <com.example.diplom.ui.castom.EditProfileItem
+                    android:id="@+id/edit_date_of_birth_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:edit_profile_item_nomination="@string/date_of_birth"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_phone_btn" />
+
+                <com.example.diplom.ui.castom.EditProfileItem
+                    android:id="@+id/edit_gender_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:edit_profile_item_nomination="@string/gender"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_date_of_birth_btn" />
+
+                <com.example.diplom.ui.castom.EditProfileItem
+                    android:id="@+id/edit_sports_category_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:edit_profile_item_nomination="@string/sports_category"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/edit_gender_btn" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.example.diplom.ui.castom.StateDisplayer>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -46,48 +46,16 @@
 
         <action
             android:id="@+id/action_auth_reg_to_enter_code"
-            app:destination="@id/enter_code">
+            app:destination="@id/enter_code_graph">
             <argument
                 android:name="phoneTitle"
                 app:argType="string" />
+            <argument
+                android:name="isRegistrate"
+                app:argType="boolean" />
         </action>
 
+
     </fragment>
-
-    <fragment
-        android:id="@+id/enter_code"
-        android:name="com.example.diplom.ui.entercode.EnterCodeFragment"
-        tools:layout="@layout/enter_cod_fragment">
-        <argument
-            android:name="phoneTitle"
-            app:argType="string" />
-
-        <argument
-            android:name="isRegistrate"
-            app:argType="boolean" />
-
-        <action
-            android:id="@+id/action_enter_code_to_enter_name"
-            app:destination="@id/enter_name" />
-
-        <action
-            android:id="@+id/enter_code_to_news_promotions_graph"
-            app:destination="@id/news_promotions_graph" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/enter_name"
-        android:name="com.example.diplom.ui.entername.EnterNameFragment"
-        tools:layout="@layout/enter_name_fragment">
-
-        <argument
-            android:name="phoneTitle"
-            app:argType="string" />
-
-        <action
-            android:id="@+id/enter_name_to_news_promotions_graph"
-            app:destination="@id/news_promotions_graph" />
-    </fragment>
-
-    <include app:graph="@navigation/news_promotions_graph" />
+    <include app:graph="@navigation/enter_code_name_graph" />
 </navigation>

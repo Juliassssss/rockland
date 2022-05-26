@@ -16,21 +16,135 @@
         <action
             android:id="@+id/action_personalCabinetFragment_to_editProfileFragment"
             app:destination="@id/editProfileFragment" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_cashAccountFragment"
+            app:destination="@id/cashAccountFragment" />
+        <action
+            android:id="@+id/action_personalCabinetFragment_to_entryCurrentFragment"
+            app:destination="@id/entryCurrentFragment">
+
+            <argument
+                android:name="isCurrent"
+                app:argType="boolean" />
+        </action>
     </fragment>
 
     <fragment
         android:id="@+id/editProfileFragment"
         android:name="com.example.diplom.ui.personalcabinet.editprofil.EditProfileFragment"
-        tools:layout="@layout/edit_profile_fragment"
-        android:label="EditProfile">
+        android:label="EditProfile"
+        tools:layout="@layout/edit_profile_fragment">
         <action
-            android:id="@+id/action_editProfileFragment_to_ex"
-            app:destination="@id/ex" />
+            android:id="@+id/action_editProfileFragment_to_edit_name_dialog"
+            app:destination="@id/edit_name_dialog">
+            <argument
+                android:name="name"
+                app:argType="string" />
+
+            <argument
+                android:name="last_name"
+                app:argType="string" />
+        </action>
+        <action
+            android:id="@+id/action_editProfileFragment_to_datepicker_graph"
+            app:destination="@id/datepicker_graph">
+            <argument
+                android:name="date"
+                android:defaultValue="@null"
+                app:argType="java.util.Date"
+                app:nullable="true" />
+        </action>
+        <action
+            android:id="@+id/action_editProfileFragment_to_editUserInfoFragmentDialog"
+            app:destination="@id/editUserInfoFragmentDialog">
+
+            <argument
+                android:name="isGender"
+                app:argType="boolean" />
+
+            <argument
+                android:name="chooseId"
+                app:argType="string" />
+
+        </action>
+        <action
+            android:id="@+id/action_editProfileFragment_to_editPhoneFragmentDialog"
+            app:destination="@id/editPhoneFragment">
+            <argument
+                android:name="phone"
+                app:argType="string" />
+        </action>
+
     </fragment>
 
-<dialog
-    android:id="@+id/ex"
-    android:name="com.example.diplom.ui.base.SingleActionChooser"/>
+    <dialog
+        android:id="@+id/edit_name_dialog"
+        android:name="com.example.diplom.ui.personalcabinet.editprofil.EditNameFragmentDialog">
+        <argument
+            android:name="name"
+            app:argType="string" />
 
+        <argument
+            android:name="last_name"
+            app:argType="string" />
+
+    </dialog>
+
+    <dialog
+        android:id="@+id/editUserInfoFragmentDialog"
+        android:name="com.example.diplom.ui.personalcabinet.editprofil.EditUserInfoFragmentDialog"
+        android:label="EditUserInfoFragmentDialog">
+
+        <argument
+            android:name="isGender"
+            app:argType="boolean" />
+
+        <argument
+            android:name="chooseId"
+            app:argType="string" />
+    </dialog>
+
+    <fragment
+        android:id="@+id/cashAccountFragment"
+        android:name="com.example.diplom.ui.cashaccount.CashAccountFragment"
+        android:label="CashAccountFragment" />
+    <fragment
+        android:id="@+id/entryCurrentFragment"
+        android:name="com.example.diplom.ui.entry.EntryCurrentFragment"
+        android:label="EntryCurrentFragment">
+
+        <argument
+            android:name="isCurrent"
+            app:argType="boolean" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/editPhoneFragment"
+        android:name="com.example.diplom.ui.personalcabinet.editprofil.phone.EditPhoneFragment"
+        android:label="EditPhoneFragmentDialog">
+        <argument
+            android:name="phone"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_editPhoneFragment_to_enter_code_graph"
+            app:destination="@id/enter_code_graph">
+            <argument
+                android:name="phoneTitle"
+                app:argType="string" />
+
+            <argument
+                android:name="isRegistrate"
+                app:argType="boolean" />
+
+            <argument
+                android:name="isEdit"
+                android:defaultValue="false"
+                app:argType="boolean" />
+        </action>
+
+    </fragment>
+
+    <include app:graph="@navigation/enter_code_name_graph" />
     <include app:graph="@navigation/login_graph" />
+    <include app:graph="@navigation/datepicker_graph" />
 </navigation>

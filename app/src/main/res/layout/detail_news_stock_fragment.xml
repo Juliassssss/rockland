@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_204"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/example_stock_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbarDetailNewsStock" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarDetailNewsStock"
+            style="@style/TextViewPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/arrow_back"
+            app:title="@string/back" />
+
+        <TextView
+            android:id="@+id/title_new_or_stock"
+            style="@style/TextViewPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size_16"
+            android:layout_marginTop="@dimen/size_16"
+            android:text="Изменение графика работы"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img" />
+
+        <TextView
+            style="@style/TextStock"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/size_16"
+            android:layout_marginTop="@dimen/size_8"
+            android:layout_marginEnd="@dimen/size_24"
+            android:text="Режим рабочего времени предусматривает, в частности, продолжительность рабочей недели (пятидневная с двумя выходными днями, шестидневная с одним выходным днем, рабочая неделя с предоставлением выходных дней по скользящему графику, неполная рабочая неделя), продолжительность ежедневной работы, время начала и окончания работы, время перерывов в работе. Указанные условия предусматриваются правилами внутреннего трудового распорядка, а если условия для конкретного работника отличается от общих правил, установленных работодателем, то сведения о режиме рабочего времени в обязательном порядке должны быть отражены в трудовом договоре с работником (ч. 2 ст. 57, ч. 1 ст. 100 ТК РФ)."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_new_or_stock" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

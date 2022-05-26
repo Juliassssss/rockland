@@ -35,4 +35,12 @@ class PersonalCabinetViewModel @Inject constructor(
         navigate(router.openEditProfile())
     }
 
+    fun openCashAccount(){
+        navigate(router.openCashAccount())
+    }
+
+    fun openCurrentEntry(isCurrent: Boolean){
+        navigate(router.openCurrentEntry(isCurrent))
+    }
+
 }

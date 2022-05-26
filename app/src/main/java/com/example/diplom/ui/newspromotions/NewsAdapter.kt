@@ -7,8 +7,6 @@ import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.diplom.R
 import com.example.diplom.databinding.ItemNewsRvBinding
 import com.example.diplom.model.News
 import javax.inject.Inject
@@ -18,7 +16,6 @@ class NewsAdapter @Inject constructor(
 ) : ListAdapter<News, NewsViewHolder>(NewsDiffUtil()) {
 
     var detailClickHandler: (News) -> Unit = {}
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val binding = ItemNewsRvBinding.inflate(
@@ -40,7 +37,7 @@ class NewsAdapter @Inject constructor(
 
 class NewsViewHolder(
     private val itemBinding: ItemNewsRvBinding,
-     private val context: Context,
+    private val context: Context,
     private val detailClickHandler: (News) -> Unit,
 ) : RecyclerView.ViewHolder(itemBinding.root) {
 
@@ -54,9 +51,11 @@ class NewsViewHolder(
 //                    .into(img)
 //            }
             title.text = new.title
+
+            news.setOnClickListener {
+                detailClickHandler(new)
+            }
         }
-
-
     }
 }
 

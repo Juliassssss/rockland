@@ -31,4 +31,8 @@ class PersoneCabinetItem @JvmOverloads constructor(
         }
         addView(binding.root)
     }
+
+    fun setSumma(sum: String){
+        binding.summa.text = sum
+    }
 }
